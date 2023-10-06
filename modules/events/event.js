@@ -37,7 +37,7 @@ export const verify = async (req, res) => {
     const user = await UserModel.findOne({ email: req.body.email });
 
     if (user) {
-      return res.status(400).json({ msg: "Registered verified" });
+      return res.status(200).json({ msg: "Registered verified" });
     } else {
       return res.status(400).json({ msg: "Not Registered, Not verified" });
     }
